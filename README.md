@@ -35,8 +35,11 @@ Os dados analisados foram coletados no banco de dados da World Values Survey (WV
 │  
 │
 ├── dashboards/
-│   └── dashboard_analytics
+│   └── MVP_WVS
 │
+├── Catálogo.md
+├── Referência.md
+├── Auto_avaliacao.md
 └── README.md
 ```
 
