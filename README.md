@@ -40,6 +40,16 @@ Os dados analisados foram coletados no banco de dados da World Values Survey (WV
 * **Ranquear os países** com maior variação percentual.
 * Correlacionar os resultados encontrados à aderência a valores conservadores. 
 
+## ETL
+
+* Extração dos dados
+  Foram selecionados 5 arquivos csv, correspondentes as waves 3, 4, 5, 6 e 7 da WVS. As waves 1 e 2 não foram selecionadas devido ao número limitado de países inclusos nestas e à falta de correspondência entre as perguntas feitas nos outros ciclos.
+* Transformação dos dados
+  Os arquivos csv foram carregados no schema staging. (Notebook 1 - Carregamento dos dados)
+  Em seguida, dispostos como tabelas no schema bronze, utilizando a linguagem python. (Notebook 2 - Limpeza e padronização dos dados - Parte 1)
+  Foram selecionadas as colunas pertinentes ao estudo - atributos de identificação do entrevistado, perguntas sobre valores religiosos (frequência com que vai à igreja, importância da religião na vida do entrevistado) e sobre valores conservadores num geral (opinião sobre aborto, eutanásia, papel da mulher na sociedade, homosexualidade e divórcio). Após isto, as colunas foram renomeadas, de acordo com os arquivos .pdf de correspondência de códigos disponibilizados no site da WVS. Foi utilizada a linguagem SQL.  (Notebook 3 - Limpeza e padronização dos dados - Parte 2)
+
+
 ## Tecnologias Utilizadas
 
 * **Databricks** (Notebooks)
