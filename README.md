@@ -43,38 +43,9 @@ Os dados analisados foram coletados no banco de dados da World Values Survey (WV
 ## ETL
 
 ### Extração dos dados
-* 
-  Foram selecionados 5 arquivos csv, correspondentes as waves 3, 4, 5, 6 e 7 da WVS. As waves 1 e 2 não foram selecionadas devido ao número limitado de países inclusos nestas e à falta de correspondência entre as perguntas feitas nos outros ciclos.
-### Transformação dos dados
-* 
-  #### Notebook 1 - Carregamento dos dados:
-  *
-  Os **arquivos csv** foram carregados no **schema staging**. 
-*  
-  #### Notebook 2 - Limpeza e padronização dos dados - Parte 1: 
-  *
-  Os arquivos csv foram **transformados em tabelas**  e dispostos ** schema bronze**, utilizando a linguagem python. 
- * 
-  #### Notebook 3 - Limpeza e padronização dos dados - Parte 2: 
-*  
-  Foram **selecionadas as colunas pertinentes** ao estudo - **atributos de identificação** do entrevistado (país, idade, sexo), perguntas sobre **valores religiosos** (frequência com que vai à igreja, importância da religião na vida do entrevistado) e sobre **valores conservadores** num geral (opinião sobre aborto, eutanásia, papel da mulher na sociedade, homosexualidade e divórcio). Após isto, as **colunas foram renomeadas**, de acordo com os arquivos .pdf de correspondência de códigos disponibilizados no site da WVS.
-*
-Por fim, foram substituidas as instâncias da coluna "religion_major_group" por valores em texto correspondentes, de acordo com os arquivos .pdf de correspondência de códigos disponibilizados no site da WVS.
-*
-Foi utilizada a linguagem SQL.  
-
- #### Notebook 4 - Limpeza e padronização dos dados - Parte 3: 
-*
-Foram unidas as 5 tabelas criadas em uma só. 
-*
-Foram substituídos os valores numéricos das instâncias remanescentes por valores em texto correspondentes, de acordo com os arquivos .pdf de correspondência de códigos disponibilizados no site da WVS. A tabela foi disposta no **schema silver**
-*
-Foram utilizadas as linguagens SQL e Spark SQL.
-
-
- #### Notebook 5 - Criação do modelo: 
- *
- Criação da **tabela fato e das tabelas dimensão**. Disposição destas no **schema gold**.
+- Foram selecionados **5 arquivos CSV**, correspondentes às **waves 3, 4, 5, 6 e 7** da *World Values Survey (WVS)*.
+- As **waves 1 e 2** não foram utilizadas devido:
+  - ao
 
 ## Tecnologias Utilizadas
 
