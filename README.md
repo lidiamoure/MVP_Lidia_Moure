@@ -42,10 +42,63 @@ Os dados analisados foram coletados no banco de dados da World Values Survey (WV
 
 ## ETL
 
+## ETL
+
 ### Extração dos dados
 - Foram selecionados **5 arquivos CSV**, correspondentes às **waves 3, 4, 5, 6 e 7** da *World Values Survey (WVS)*.
 - As **waves 1 e 2** não foram utilizadas devido:
-  - ao
+  - ao **número limitado de países** incluídos;
+  - à **falta de correspondência entre as perguntas** realizadas nos ciclos posteriores.
+
+### Transformação dos dados
+
+#### Notebook 1 – Carregamento dos dados
+- Os **arquivos CSV** foram carregados no **schema `staging`**.
+
+#### Notebook 2 – Limpeza e padronização dos dados (Parte 1)
+- Os arquivos CSV foram **transformados em tabelas** e dispostos no **schema `bronze`**.
+- Linguagem utilizada: **Python**.
+
+#### Notebook 3 – Limpeza e padronização dos dados (Parte 2)
+- Foram **selecionadas as colunas pertinentes ao estudo**, incluindo:
+  - **Atributos de identificação** do entrevistado (país, idade e sexo);
+  - Perguntas sobre **valores religiosos** (frequência de ida à igreja e importância da religião);
+  - Perguntas sobre **valores conservadores**, como:
+    - aborto;
+    - eutanásia;
+    - papel da mulher na sociedade;
+    - homossexualidade;
+    - divórcio.
+- As **colunas foram renomeadas** conforme os arquivos **PDF de correspondência de códigos** disponibilizados no site da WVS.
+- As instâncias da coluna **`religion_major_group`** foram substituídas por **valores textuais correspondentes**, com base nos mesmos arquivos.
+- Linguagem utilizada: **SQL**.
+
+#### Notebook 4 – Limpeza e padronização dos dados (Parte 3)
+- As **5 tabelas** foram **unificadas em uma única tabela**.
+- Os **valores numéricos remanescentes** foram substituídos por **valores textuais correspondentes**, conforme os arquivos de correspondência da WVS.
+- A tabela final foi disposta no **schema `silver`**.
+- Linguagens utilizadas: **SQL** e **Spark SQL**.
+
+#### Notebook 5 – Criação do modelo
+- Criação da **tabela fato** e das **tabelas dimensão**.
+- As tabelas foram dispostas no **schema `gold`**.
+- 
+## Análise dos dados
+
+#### Notebook 6 – Análise dos dados (Parte 1)
+- Cálculo da **variação percentual de católicos romanos** ao longo das waves.
+- Cálculo da **variação percentual de católicos romanos** ao longo das waves, em comparação ao **montante de católicos + protestantes**.
+- Identificação dos **países com maior crescimento percentual de católicos romanos**, tanto em termos absolutos quanto **em relação aos protestantes**.
+
+#### Notebook 7 – Análise dos dados (Parte 2)
+- Cálculo do **percentual de aderência a valores conservadores** entre os entrevistados.
+
+#### Notebook 8 – Análise dos dados (Parte 3)
+- Análise dos **valores conservadores nos países com maior crescimento do catolicismo**.
+- Comentários e interpretações baseados nos **insights apresentados no dashboard** criado no Databricks.
+
+
+
 
 ## Tecnologias Utilizadas
 
