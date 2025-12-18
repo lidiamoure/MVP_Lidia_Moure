@@ -1,10 +1,12 @@
-# Pipeline de Dados no Databricks
+# Análise do aumento percentual de jovens da Geração Z praticantes do catolicismo
 
-## Visão Geral
+## Resumo
 
-Este repositório documenta uma **pipeline de dados desenvolvida no Databricks**, utilizando notebooks, tabelas Delta Lake e dashboards para ingestão, tratamento, modelagem e visualização de dados.
+Muito tem se comentado a respeito do retorno dos jovens da geração z ao catolicismo, bem como de sua maior aderência a valores conservadores num geral. O objetivo deste estudo é verificar a vercidade destas hipóteses. Para este fim, foi desenvolvida uma pipeline de dados no Databricks, utilizando notebooks, tabelas Delta Lake e um dashboard para ingestão, tratamento, modelagem e visualização de dados.
 
-A pipeline segue uma arquitetura em camadas (**Bronze, Silver e Gold**), garantindo qualidade, rastreabilidade e escalabilidade dos dados.
+Os dados analisados foram coletados no banco de dados da World Values Survey (WVS), projeto de pesquisa global que estuda os valores e crenças socioculturais, políticos, econômicos e religiosos das pessoas em todo o mundo. Todo o processo de carga, limpeza e padronização, criação do modelo e análise e vizualização dos dados está registrado de forma objetiva e completa ao longo de 8 notebooks e um dashboard no DataBricks.
+
+
 
 ---
 
