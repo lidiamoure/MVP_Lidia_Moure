@@ -40,7 +40,7 @@ Os dados analisados foram coletados no banco de dados da World Values Survey (WV
 * **Ranquear os países** com maior variação percentual.
 * Correlacionar os resultados encontrados à aderência a valores conservadores. 
 
-## ETL
+
 
 ## ETL
 
