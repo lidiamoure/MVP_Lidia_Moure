@@ -1,0 +1,24 @@
+{
+  "datasets": [
+    {
+      "name": "e3199e3a",
+      "displayName": "fact_wave_all",
+      "queryLines": [
+        "SELECT * FROM mvp_wvs.gold.fact_wave_all"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "name": "62bb3cbb",
+      "displayName": "Untitled page",
+      "pageType": "PAGE_TYPE_CANVAS"
+    }
+  ],
+  "uiSettings": {
+    "theme": {
+      "widgetHeaderAlignment": "ALIGNMENT_UNSPECIFIED"
+    },
+    "applyModeEnabled": false
+  }
+}
