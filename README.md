@@ -7,19 +7,6 @@ Muito tem se comentado a respeito do retorno dos jovens da geração z ao catoli
 Os dados analisados foram coletados no banco de dados da World Values Survey (WVS), projeto de pesquisa global que estuda os valores e crenças socioculturais, políticos, econômicos e religiosos das pessoas em todo o mundo. Todo o processo de carga, limpeza e padronização, criação do modelo e análise e vizualização dos dados está registrado de forma objetiva e completa ao longo de 8 notebooks e um dashboard no DataBricks.
 
 
-
----
-
-## Tecnologias Utilizadas
-
-* **Databricks** (Notebooks)
-* **Apache Spark (SQL / PySpark)**
-* **Delta Lake**
-* **GitHub** (versionamento)
-* **Dashboards Databricks**
-
----
-
 ## Estrutura do Projeto
 
 ```
@@ -44,98 +31,21 @@ Os dados analisados foram coletados no banco de dados da World Values Survey (WV
 ```
 
 ---
-
-## Descrição da Pipeline
-
-### 1. Camada Bronze – Ingestão de Dados
-
-Responsável por receber os dados em seu formato original.
-
-Principais características:
-
-* Dados brutos (raw)
-* Sem grandes transformações
-* Persistência em tabelas Delta
-
-Exemplos de operações:
-
-* Leitura de arquivos externos
-* Padronização mínima de colunas
-
 ---
 
-### 2. Camada Silver – Tratamento e Limpeza
+## Objetivos
 
-Nesta etapa ocorre o tratamento dos dados.
+* Verificar a **variação percentual** de jovens católicos ao longo do tempo.
+* Verificar a **variação percentual** de jovens católicos em relação ao montante "católicos + Protestantes" ao longo do tempo.
+* **Ranquear os países** com maior variação percentual.
+* Correlacionar os resultados encontrados à aderência a valores conservadores. 
 
-Principais atividades:
+## Tecnologias Utilizadas
 
-* Limpeza de valores inválidos (NULL, NaN, códigos especiais)
-* Padronização de tipos de dados
-* Criação de colunas derivadas
-* Normalização de categorias
-
-Objetivo: garantir **consistência e qualidade dos dados**.
-
----
-
-### 3. Camada Gold – Modelagem Analítica
-
-Camada voltada para consumo analítico.
-
-Características:
-
-* Criação de **tabelas fato e dimensões**
-* Aplicação de **esquema estrela**
-* Dados prontos para análises e dashboards
-
-Exemplos:
-
-* Tabelas dimensão (ex: sexo, idade, país, religião)
-* Tabelas fato com métricas consolidadas
+* **Databricks** (Notebooks)
+* **Apache Spark (SQL / PySpark)**
+* **Delta Lake**
+* **GitHub** (versionamento)
+* **Dashboards Databricks**
 
 ---
-
-## Dashboards
-
-Os dashboards foram criados diretamente no Databricks a partir das tabelas da camada Gold.
-
-Eles permitem:
-
-* Visualização interativa dos dados
-* Análise de indicadores-chave
-* Exploração por filtros (ex: país, período, categoria)
-
----
-
-## Versionamento e Reprodutibilidade
-
-* Os notebooks foram exportados e versionados neste repositório
-* Toda a lógica de transformação está documentada em código
-* A pipeline pode ser reproduzida executando os notebooks na ordem:
-
-1. Bronze
-2. Silver
-3. Gold
-4. Dashboards
-
----
-
-## Como Executar
-
-1. Importar os notebooks no Databricks
-2. Ajustar caminhos de leitura, se necessário
-3. Executar os notebooks seguindo a ordem das camadas
-4. Atualizar os dashboards
-
----
-
-## Observações Finais
-
-Este projeto demonstra a construção de uma pipeline de dados moderna utilizando Databricks e Delta Lake, com foco em boas práticas de engenharia de dados e organização analítica.
-
----
-
-## Autor
-
-Projeto desenvolvido por **[Seu Nome]**
