@@ -25,14 +25,14 @@ Os dados analisados foram coletados no banco de dados da World Values Survey (WV
 ```
 ├── notebooks/
 │   ├── 1 - Carregamento dos arquivos
-│   ├── 2 - Limpeza e padronização dos dados - Parte 1
-│   ├── 3 - Limpeza e padronização dos dados - Parte 2
-│   ├── 4 - Limpeza e padronização dos dados - Parte 3
+│   ├── 2 - Limpeza e padronização dos dados - Parte 1   ## Seleção das colunas úteis para a composição do modelo.
+│   ├── 3 - Limpeza e padronização dos dados - Parte 2   ## Reestruturação dos valores numéricos das instâncias para texto. 
+│   ├── 4 - Limpeza e padronização dos dados - Parte 3   ## União das tabelas padronizadas em uma única tabela fato.
 │   ├── 5 - Criação do modelo
-│   ├── 6 - Análise - Parte 1
-│   ├── 7 - Análise - Parte 2
-│   ├── 8 - Análise - Parte 3 (Dashboard)
-│   └── analysis
+│   ├── 6 - Análise - Parte 1              ## Análise do crescimento percentual do catolicismo.
+│   ├── 7 - Análise - Parte 2              ## Análise dos valores conservadores dos jovens ao longo do tempo.
+│   └──  8 - Análise - Parte 3 (Dashboard)  ## Análise dos valores conservadores dos jovens ao longo do tempo, com ênfase nos países com maior crescimento percentual de católicos. 
+│  
 │
 ├── dashboards/
 │   └── dashboard_analytics
