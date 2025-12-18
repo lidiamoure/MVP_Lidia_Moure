@@ -6,30 +6,34 @@
 
 
 
-| Coluna                     | Tipo   | Descrição |
-|---------------------------|--------|-----------|
-| country_code              | int    | Código do país do entrevistado. |
-| year_survey               | int    | Ano em que a pesquisa foi aplicada. |
-| age                       | int    | Idade da pessoa entrevistada. |
-| wave_chronology           | int    | Número da wave (onda) da pesquisa. |
-| religion_major_group      | string | Religião declarada pelo entrevistado. |
-| sex                       | string | Sexo da pessoa entrevistada. |
-| important_religion        | string | Grau de importância da religião na vida do entrevistado. |
-| men_better_leaders        | string | Opinião sobre se homens são melhores líderes políticos que mulheres. |
-| child_religious_faith     | string | Qualidade a ser incentivada nas crianças: fé religiosa. |
-| housewife_fulfilling      | string | Opinião se ser dona de casa é tão gratificante quanto trabalhar fora. |
-| attendance_services       | string | Frequência de participação em cultos religiosos. |
-| religious_person          | string | Autodeclaração como pessoa religiosa. |
-| importance_god            | string | Grau de importância de Deus na vida do entrevistado. |
-| university_more_for_boys  | string | Opinião se a universidade é mais importante para meninos do que para meninas. |
-| men_priority_jobs         | string | Opinião se homens devem ter prioridade em empregos em caso de escassez. |
-| neighbors_homosexuals     | string | Rejeição a homossexuais como vizinhos. |
-| confidence_churches       | string | Grau de confiança nas igrejas como instituição. |
-| justifiable_homosexuality | string | Grau de justificabilidade da homossexualidade (escala de 0 a 10). |
-| justifiable_abortion      | string | Grau de justificabilidade do aborto (escala de 0 a 10). |
-| justifiable_divorce       | string | Grau de justificabilidade do divórcio (escala de 0 a 10). |
-| justifiable_euthanasia    | string | Grau de justificabilidade da eutanásia (escala de 0 a 10). |
-| justifiable_prostitution  | string | Grau de justificabilidade da prostituição (escala de 0 a 10). |
+## Tabela: fact_wave_all
+- **Camada:** Gold  
+- **Descrição:** Tabela fato com dados da pesquisa World Values Survey, contendo informações demográficas e respostas relacionadas a religião, valores sociais e opiniões.
+
+| Coluna | Tipo | Descrição |
+|------|------|-----------|
+| country_code | INT | Código do país |
+| year_survey | INT | Ano em que a pesquisa foi aplicada |
+| age | INT | Idade da pessoa entrevistada |
+| wave_chronology | INT | Número da wave em questão |
+| religion_major_group | STRING | Religião declarada |
+| sex | STRING | Sexo da pessoa entrevistada |
+| important_religion | STRING | Pergunta: O quão importante a religião é na sua vida? |
+| men_better_leaders | STRING | Pergunta: De modo geral, homens são melhores líderes políticos que mulheres? |
+| child_religious_faith | STRING | Enumerar qualidades que devem ser incentivadas às crianças em casa: Fé religiosa |
+| housewife_fulfilling | STRING | Pergunta: Ser dona de casa é tão gratificante quanto trabalhar fora? |
+| attendance_services | STRING | Pergunta: Com que frequência você vai a cultos religiosos? |
+| religious_person | STRING | Pergunta: Você se considera uma pessoa religiosa? |
+| importance_god | STRING | Pergunta: O quão importante é Deus em sua vida? |
+| university_more_for_boys | STRING | Pergunta: Você concorda que ir à universidade é mais importante para um menino do que para uma menina? |
+| men_priority_jobs | STRING | Pergunta: Em caso de escassez de empregos, homens devem ter prioridade em relação às mulheres? |
+| neighbors_homosexuals | STRING | Lista: Mencione o tipo de pessoas que você não gostaria de ter como vizinho: \"Homosexuais\" |
+| confidence_churches | STRING | Pergunta: Você confia nas igrejas como instituição? |
+| justifiable_homosexuality | STRING | Pergunta: Numa escala de 0 a 10, em que 0 é \"Nunca justificável\" e 10 é \"Sempre justificável\", o quão justificável para você é a homossexualidade? |
+| justifiable_abortion | STRING | Pergunta: Numa escala de 0 a 10, em que 0 é \"Nunca justificável\" e 10 é \"Sempre justificável\", o quão justificável para você é o aborto? |
+| justifiable_divorce | STRING | Pergunta: Numa escala de 0 a 10, em que 0 é \"Nunca justificável\" e 10 é \"Sempre justificável\", o quão justificável para você é o divórcio? |
+| justifiable_euthanasia | STRING | Pergunta: Numa escala de 0 a 10, em que 0 é \"Nunca justificável\" e 10 é \"Sempre justificável\", o quão justificável para você é a eutanásia? |
+| justifiable_prostitution | STRING | Pergunta: Numa escala de 0 a 10, em que 0 é \"Nunca justificável\" e 10 é \"Sempre justificável\", o quão justificável para você é a prostituição? |
 
 
 ## Tabela: dim_country
