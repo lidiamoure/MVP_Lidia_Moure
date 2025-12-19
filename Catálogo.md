@@ -75,3 +75,40 @@
 | Coluna                     | Tipo   | Descrição |
 |---------------------------|--------|-----------|
 | Wave                      | int    | Número identificador do ciclo da pesquisa |
+
+View: v_countries_growth_catholicism
+
+Camada: Gold
+
+Descrição: View análitica que retorna os 10 países que apresentaram maior crescimento percentual de católicos romanos, cujos entrevistados tinham entre 15 e 25 anos no momento em que a pesquisa foi aplicada.
+
+| Coluna                | Tipo   | Descrição                                                                                                                             |
+| --------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------- |
+| country               | string | Nome do país.                                                                                                                         |
+| country_code          | int    | Código do país.                                                                                                                       |
+| catholic_growth_slope | double | Inclinação da regressão linear indicando crescimento (valor positivo) ou declínio (valor negativo) do catolicismo ao longo das waves. |
+
+
+View: v_countries_growth_catholicism_pct_catholic_protestant_waves_6_to_7
+
+Camada: Gold
+
+Descrição: View análitica que retorna os 10 países que apresentaram maior crescimento percentual de católicos romanos entre as waves 6 e 7, cujos entrevistados tinham entre 15 e 25 anos no momento em que a pesquisa foi aplicada.
+
+| Coluna       | Tipo   | Descrição                                                                                          |
+| ------------ | ------ | -------------------------------------------------------------------------------------------------- |
+| country      | string | Nome do país.                                                                                      |
+| country_code | int    | Código do país.                                                                                    |
+| trend_slope  | double | Inclinação da tendência da proporção entre católicos e protestantes ao longo das waves analisadas. |
+| n_waves      | int    | Quantidade de waves consideradas no cálculo da tendência.                                          |
+
+
+View: view_top_catholicprotestants
+
+Camada: Gold
+
+Descrição: View análitica que retorna os 10 países que apresentaram maior crescimento percentual de católicos romanos, em relação ao montante "católicos romanos + protestantes", entre as waves 6 e 7, cujos entrevistados tinham entre 15 e 25 anos no momento em que a pesquisa foi aplicada.
+
+| Coluna  | Tipo   | Descrição     |
+| ------- | ------ | ------------- |
+| country | string | Nome do país. |
