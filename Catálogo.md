@@ -76,7 +76,7 @@
 |---------------------------|--------|-----------|
 | Wave                      | int    | Número identificador do ciclo da pesquisa |
 
-View: v_countries_growth_catholicism
+## View: v_countries_growth_catholicism
 
 Camada: Gold
 
@@ -89,7 +89,7 @@ Descrição: View análitica que retorna os 10 países que apresentaram maior cr
 | catholic_growth_slope | double | Inclinação da regressão linear indicando crescimento (valor positivo) ou declínio (valor negativo) do catolicismo ao longo das waves. |
 
 
-View: v_countries_growth_catholicism_pct_catholic_protestant_waves_6_to_7
+## View: v_countries_growth_catholicism_pct_catholic_protestant_waves_6_to_7
 
 Camada: Gold
 
@@ -103,7 +103,7 @@ Descrição: View análitica que retorna os 10 países que apresentaram maior cr
 | n_waves      | int    | Quantidade de waves consideradas no cálculo da tendência.                                          |
 
 
-View: view_top_catholicprotestants
+## View: view_top_catholicprotestants
 
 Camada: Gold
 
