@@ -90,11 +90,7 @@ Os dados analisados foram coletados no banco de dados da World Values Survey (WV
 - Identificação dos **países com maior crescimento percentual de católicos romanos**, tanto em termos absolutos quanto **em relação aos protestantes**.
 
 #### Notebook 7 – Análise dos dados (Parte 2)
-- Cálculo do **percentual de aderência a valores conservadores** entre os entrevistados.
-
-#### Notebook 8 – Análise dos dados (Parte 3)
-- Análise dos **valores conservadores nos países com maior crescimento do catolicismo**.
-- Comentários e interpretações baseados nos **insights apresentados no dashboard** criado no Databricks.
+- Análise dos **valores conservadores nos países com maior crescimento recente do catolicismo** em relação às outras religiões declaradas e em relação ao montante "católicos + protestantes".
 
 
 
