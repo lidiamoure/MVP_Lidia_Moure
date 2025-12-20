@@ -104,7 +104,7 @@ Os dados analisados foram coletados no banco de dados da World Values Survey (WV
 * **dbdiagram.io** (criação do arquivo PDF do modelo)
 
 ---
-Como executar:
+## Como executar:
 
 1. Clonar esse repositório no databricks
 2. Executar o notebook "0 - Preparação"
