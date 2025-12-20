@@ -81,7 +81,7 @@ Os dados analisados foram coletados no banco de dados da World Values Survey (WV
 #### Notebook 5 – Criação do modelo
 - Criação da **tabela fato** e das **tabelas dimensão**.
 - As tabelas foram dispostas no **schema `gold`**.
-- 
+
 ## Análise dos dados
 
 #### Notebook 6 – Análise dos dados (Parte 1)
