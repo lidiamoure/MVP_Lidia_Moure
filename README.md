@@ -105,6 +105,6 @@ Os dados analisados foram coletados no banco de dados da World Values Survey (WV
 * **Apache Spark (SQL / PySpark)**
 * **Delta Lake**
 * **GitHub** (versionamento)
-* **Dashboards Databricks**
+* **dbdiagram.io** (criação do arquivo PDF do modelo)
 
 ---
