@@ -106,7 +106,7 @@ Os dados analisados foram coletados no banco de dados da World Values Survey (WV
 ---
 Como executar:
 
-Clonar esse repositório no databricks
-executar o notebook 0 (preparação)
-baixar os dados utilizados no link: #link e carregá-los no seguinte caminho. 
-Seguir a execução dos demais notebooks.
+1. Clonar esse repositório no databricks
+2. Executar o notebook "0 - Preparação"
+3. Baixar os arquivos deste link: https://drive.google.com/drive/folders/1uCnXJ8QNg-JwJIq6bFxo5jfSmprNFkmC?usp=drive_link e carregá-los no seguinte caminho do databricks: "mvp_wvs.staging.wvs"
+4. Seguir com a execução dos demais notebooks.
