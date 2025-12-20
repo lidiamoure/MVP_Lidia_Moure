@@ -20,8 +20,8 @@ Os dados analisados foram coletados no banco de dados da World Values Survey (WV
 │   └── 7 - Análise - Parte 2              ## Análise dos valores conservadores dos jovens ao longo do tempo.
 │  
 │
-├── dashboards/
-│   └── MVP_WVS
+├── Modelo relacional
+│   └── Modelo.pdf
 │
 ├── Catálogo.md
 ├── Referência.md
