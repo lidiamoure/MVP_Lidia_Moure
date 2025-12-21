@@ -88,14 +88,14 @@ Foi criado um modelo do tipo **_Snowflake_**, composto por uma tabela fato e qua
 
 ## ETL
 
-### Extração dos dados
+### Extração 
 
 - Foram selecionados **5 arquivos CSV**, correspondentes às **waves 3, 4, 5, 6 e 7** da *World Values Survey (WVS)*.
 - As **waves 1 e 2** não foram utilizadas devido:
   - ao **número limitado de países** incluídos;
   - à **falta de correspondência entre as perguntas** realizadas nos ciclos posteriores.
 
-### Transformação dos dados
+### Transformação
 
 #### Notebook 1 – Carregamento dos dados
 - Os **arquivos CSV** foram carregados no **schema `staging`**.
@@ -125,7 +125,7 @@ Foi criado um modelo do tipo **_Snowflake_**, composto por uma tabela fato e qua
 - A tabela final foi disposta no **schema `silver`**.
 - Linguagens utilizadas: **SQL** e **Spark SQL**.
 
-### Carregamento dos dados
+### Carregamento 
 
 #### Notebook 5 – Criação do modelo
 - Criação da **tabela fato** e das **tabelas dimensão**.
