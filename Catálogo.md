@@ -2,11 +2,8 @@
 
 ## Tabela: fact_wave_all
 - Camada: Gold
-- Descrição: Tabela fato com dados consolidados da pesquisa WVS.
+- Descrição: Tabela fato com dados consolidados dos ciclos de pesquisa analisados.
 
-
-
-## Tabela: fact_wave_all
 - **Origem dos dados**: **World's Values Survey**
 - **Camada:** Gold  
 - **Descrição:** Tabela fato com dados da pesquisa World Values Survey, contendo informações demográficas e respostas relacionadas a religião, valores sociais e opiniões.
@@ -41,7 +38,7 @@
 ## Tabela: dim_country
 
 - Camada: Gold
-- Descrição: Tabela dimensão com dados consolidados da pesquisa WVS.
+- Descrição: Tabela dimensão que reúne os nomes distintos dos países e seus respectivos códigos.
 
 | Coluna                     | Tipo   | Descrição |
 |---------------------------|--------|-----------|
@@ -52,8 +49,8 @@
 ## Tabela: dim_age
 
 - Camada: Gold
-- Descrição: Tabela dimensão com dados consolidados da pesquisa WVS.
-
+- Descrição: Tabela dimensão que reúne os valores distintos das idades dos entrevitados e suas respectivas faixas etárias.
+- 
 | Coluna                     | Tipo   | Descrição |
 |---------------------------|--------|-----------|
 | age                       | int    | Idade do entrevistado. |
@@ -62,7 +59,7 @@
 ## Tabela: dim_age_range
 
 - Camada: Gold
-- Descrição: Tabela dimensão com dados consolidados da pesquisa WVS.
+- Descrição: Tabela dimensão que reúne os valores distintos das faixas etárias dos entrevistados. 
 
 | Coluna                     | Tipo   | Descrição |
 |---------------------------|--------|-----------|
@@ -72,7 +69,7 @@
 ## Tabela: dim_wave
 
 - Camada: Gold
-- Descrição: Tabela dimensão com dados consolidados da pesquisa WVS.
+- Descrição: Tabela dimensão que reúne os valores distintos que identificam a Wave do ciclo de pesquisa realizado.
   
 | Coluna                     | Tipo   | Descrição |
 |---------------------------|--------|-----------|
