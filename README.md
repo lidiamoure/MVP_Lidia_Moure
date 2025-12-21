@@ -53,44 +53,43 @@ Os ciclos de pesquisa do WVS são classificados em "Waves". A Wave mais recente,
 ## Objetivos
 
 * Verificar a **variação percentual** de jovens católicos ao longo do tempo.
-* Verificar a **variação percentual** de jovens católicos em relação ao montante "católicos + Protestantes" ao longo do tempo.
+* Verificar a **variação percentual** de jovens católicos em relação ao montante “católicos + protestantes” ao longo do tempo.
 * **Ranquear os países** com maior variação percentual.
-* Correlacionar os resultados encontrados à aderência a valores conservadores.
+* Correlacionar os resultados encontrados com a aderência a valores conservadores.
 
 ## Qualidade dos dados
 
-- A base de dados escolhida não apresentou problemas de qualidade _per se_. Os arquivos CSV tinham delimitadores claros, com atomicidade presente e não foram encontradas duplicidade ou inconsistências.
-- Contudo, tanto o nome das colunas quanto as instâncias delas são originalmente preenchidas com siglas (string) e números (INT). Para possibilitar a análise dos dados, foi feita a substituição destas siglas e números pelos dados correspondentes. Estes, são disponibilizados nos arquivos de correspondência e code notebooks no site da WVS. Estes arquivos também estão disponíveis na seguinte pasta deste repositório: "Arquivos utilizados para preparação de dados".
-- A limpeza e padronização dos dados foi feita ao longo de três notebooks no Databricks. Foram utilizadas as linguagens SQL e Python.
+- A base de dados escolhida não apresentou problemas de qualidade *per se*. Os arquivos CSV possuíam delimitadores claros, atomicidade preservada e não foram encontradas duplicidades ou inconsistências.
+  
+- Contudo, tanto os nomes das colunas quanto suas instâncias são originalmente preenchidos com siglas (string) e números (INT). Para possibilitar a análise dos dados, foi realizada a substituição dessas siglas e números pelos valores correspondentes, disponibilizados nos arquivos de correspondência e *code notebooks* no site da WVS. Esses arquivos também estão disponíveis na pasta “Arquivos usados para preparação de dados” deste repositório.
+  
+- A limpeza e padronização dos dados foram realizadas ao longo de três notebooks no Databricks, utilizando as linguagens SQL e Python.
+
   
 ## Descrição do modelo criado
 
-Foi criado um modelo tipo **_Snow Flake_** com uma tabela dimensão e quatro tabelas fatos.
+Foi criado um modelo do tipo **_Snowflake_**, composto por uma tabela fato e quatro tabelas dimensão.
 
 ### Tabela fato
 
-* **fact_wave_all**: Reúne as informações de identificação dos entrevistados (país, sexo, faixa etária), as respostas das perguntas feitas e a ciclo de pesquisa em questão.
+* **fact_wave_all**: Reúne as informações de identificação dos entrevistados (país, sexo e faixa etária), as respostas às perguntas realizadas e o ciclo de pesquisa em questão.
 
 ### Tabelas dimensão
 
-* **dim_country**: Reúne o nome dos países e seu código correspondente.
-
-* **dim_age**: Reúne os valores distintos das idades dos entrevistados ao longo das waves e a faixa etária correspondente a cada idade. 
-
-* **dim_age_range**: Reúne os valores distintos das faixas etárias. 
-
-* **dim_wave**: Reúne os valores distintos que identificam cada Wave. 
-
-
-
-
-
+* **dim_country**: Reúne o nome dos países e seus respectivos códigos.
+  
+* **dim_age**: Reúne os valores distintos das idades dos entrevistados ao longo das waves e a faixa etária correspondente a cada idade.
+  
+* **dim_age_range**: Reúne os valores distintos das faixas etárias.
+  
+* **dim_wave**: Reúne os valores distintos que identificam cada Wave.
 
 
 
 ## ETL
 
 ### Extração dos dados
+
 - Foram selecionados **5 arquivos CSV**, correspondentes às **waves 3, 4, 5, 6 e 7** da *World Values Survey (WVS)*.
 - As **waves 1 e 2** não foram utilizadas devido:
   - ao **número limitado de países** incluídos;
@@ -107,16 +106,17 @@ Foi criado um modelo tipo **_Snow Flake_** com uma tabela dimensão e quatro tab
 
 #### Notebook 3 – Limpeza e padronização dos dados (Parte 2)
 - Foram **selecionadas as colunas pertinentes ao estudo**, incluindo:
-  - **Atributos de identificação** do entrevistado (país, idade e sexo);
-  - Perguntas sobre **valores religiosos** (frequência de ida à igreja e importância da religião);
-  - Perguntas sobre **valores conservadores**, como:
+  - **atributos de identificação** do entrevistado (país, idade e sexo);
+  - perguntas sobre **valores religiosos** (frequência de ida à igreja e importância da religião);
+  - perguntas sobre **valores conservadores**, como:
     - aborto;
     - eutanásia;
     - papel da mulher na sociedade;
     - homossexualidade;
-    - divórcio.
-- As **colunas foram renomeadas** conforme os arquivos **PDF de correspondência de códigos** disponibilizados no site da WVS.
-- As instâncias da coluna **`religion_major_group`** foram substituídas por **valores textuais correspondentes**, com base nos mesmos arquivos.
+    - divórcio;
+    - prostituição.
+- As **colunas foram renomeadas** conforme os arquivos PDF de correspondência de códigos disponibilizados no site da WVS.
+- As instâncias da coluna **`religion_major_group`** foram substituídas por **valores textuais correspondentes**, com base nos mesmos arquivos. 
 - Linguagem utilizada: **SQL**.
 
 #### Notebook 4 – Limpeza e padronização dos dados (Parte 3)
@@ -125,7 +125,7 @@ Foi criado um modelo tipo **_Snow Flake_** com uma tabela dimensão e quatro tab
 - A tabela final foi disposta no **schema `silver`**.
 - Linguagens utilizadas: **SQL** e **Spark SQL**.
 
-### Carregamento dos dados 
+### Carregamento dos dados
 
 #### Notebook 5 – Criação do modelo
 - Criação da **tabela fato** e das **tabelas dimensão**.
@@ -135,7 +135,18 @@ Foi criado um modelo tipo **_Snow Flake_** com uma tabela dimensão e quatro tab
 
 #### Notebook 6 – Análise dos dados (Parte 1)
 - Cálculo da **variação percentual de católicos romanos** ao longo das waves.
-- Cálculo da **variação percentual de católicos romanos** ao longo das waves, em comparação ao **montante de católicos + protestantes**.
+- Cálculo da **variação percentual de católicos romanos** ao longo das waves em comparação ao **montante de "católicos + protestantes"**.
+- Identificação dos **países com maior crescimento percentual de católicos romanos**, tanto em termos absolutos quanto **em relação aos protestantes**.
+
+#### Notebook 7 – Análise dos dados (Parte 2)
+- Análise dos **valores conservadores** nos países com maior crescimento recente do catolicismo, tanto em relação às outras religiões declaradas quanto ao montante “católicos + protestantes”.
+
+
+## Análise dos dados
+
+#### Notebook 6 – Análise dos dados (Parte 1)
+- Cálculo da **variação percentual de católicos romanos** ao longo das waves.
+- Cálculo da **variação percentual de católicos romanos** ao longo das waves, em comparação ao **montante de "católicos + protestantes"**.
 - Identificação dos **países com maior crescimento percentual de católicos romanos**, tanto em termos absolutos quanto **em relação aos protestantes**.
 
 #### Notebook 7 – Análise dos dados (Parte 2)
@@ -151,9 +162,12 @@ Foi criado um modelo tipo **_Snow Flake_** com uma tabela dimensão e quatro tab
 * **dbdiagram.io** (criação do arquivo PDF do modelo)
 
 ---
-## Como executar:
 
-1. Clonar esse repositório no databricks
-2. Executar o notebook "0 - Preparação"
-3. Baixar os arquivos deste link: https://drive.google.com/drive/folders/1uCnXJ8QNg-JwJIq6bFxo5jfSmprNFkmC?usp=drive_link e carregá-los no seguinte caminho do databricks: "mvp_wvs.staging.wvs"
-4. Seguir com a execução dos demais notebooks.
+## Como executar
+
+1. Clonar este repositório no Databricks.
+2. Executar o notebook **“0 - Preparação”**.
+3. Baixar os arquivos disponíveis no link:  
+   https://drive.google.com/drive/folders/1uCnXJ8QNg-JwJIq6bFxo5jfSmprNFkmC?usp=drive_link  
+   e carregá-los no seguinte caminho do Databricks: **`mvp_wvs.staging.wvs`**.
+4. Executar os demais notebooks na ordem apresentada.
