@@ -11,20 +11,37 @@ Os dados analisados foram coletados no banco de dados da World Values Survey (WV
 
 ```
 ├── notebooks/
-│   ├── 1 - Carregamento dos arquivos
+│   ├── 0 - Preparação     ## Cria schemas, volumes e catálogos necessários para desenvolvimento da pipeline.
+│   │           
+│   ├── 1 - Carregamento dos arquivos  ## Carrega os arquivos utilizados no esquema staging
+│   │ 
 │   ├── 2 - Limpeza e padronização dos dados - Parte 1   ## Seleção das colunas úteis para a composição do modelo.
-│   ├── 3 - Limpeza e padronização dos dados - Parte 2   ## Reestruturação dos valores numéricos das instâncias para texto. 
+│   │ 
+│   ├── 3 - Limpeza e padronização dos dados - Parte 2   ## Reestruturação dos valores numéricos das instâncias para texto.
+│   │ 
 │   ├── 4 - Limpeza e padronização dos dados - Parte 3   ## União das tabelas padronizadas em uma única tabela fato.
+│   │ 
 │   ├── 5 - Criação do modelo              ## Criação das tabelas fato e dimensão que compõe o modelo.
-│   ├── 6 - Análise - Parte 1              ## Análise do crescimento percentual do catolicismo.│  
-│   └── 7 - Análise - Parte 2              ## Análise dos valores conservadores dos jovens ao longo do tempo.
-│  
+│   │ 
+│   ├── 6 - Análise - Parte 1              ## Análise do crescimento percentual do catolicismo.
+│   │ 
+│   └── 7 - Análise - Parte 2              ## Análise dos valores conservadores ao longo do tempo.
+│ 
+│
+├── Arquivos usados para preparação de dados/       ## Estes arquivos estão disponíveis no site da WVS
+│   └── Variaveis_e_equivalências.xlsx    ## Este arquivo mostra a equivalência entre os códigos dos nomes das colunas do modelo e seus respectivos significados.
+│   └── Code_Notebook/                    ## Esta pasta armazena 5 arquivos pdf (um para cada wave) que mostram a equivalência entre os códigos das instâncias de cada coluna do modelo e seus respectivos significados.
+│
 │
 ├── Modelo relacional
-│   └── Modelo.pdf
+│   └── Modelo.pdf       ## Diagrama do modelo relacional criado
+│
+├── Evidência das análises/
+│   ├── Evidências_Análises_Parte1.pdf    ## Evidencia as análises feitas no notebook "6 - Análise - Parte 1"
+│   ├── Evidências_Análises_Parte1.pdf    ## Evidencia as análises feitas no notebook "7 - Análise - Parte 2"
 │
 ├── Catálogo.md
-├── Referência.md
+├── Referências.md
 ├── Auto_avaliacao.md
 └── README.md
 ```
