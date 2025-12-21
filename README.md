@@ -1,11 +1,12 @@
 # Análise do aumento percentual de jovens da Geração Z praticantes do catolicismo
 
-## Resumo
+## Introdução
 
 Muito tem se discutido a respeito do retorno dos jovens da geração z ao catolicismo, bem como de sua maior aderência a valores conservadores num geral. O objetivo deste estudo é verificar a vercidade destas hipóteses. Para este fim, foi desenvolvida uma pipeline de dados no Databricks, utilizando notebooks, tabelas Delta Lake para ingestão, tratamento, modelagem e visualização de dados.
 
-Os dados analisados foram coletados no banco de dados da World Values Survey (WVS), projeto de pesquisa global que estuda os valores e crenças socioculturais, políticos, econômicos e religiosos das pessoas em todo o mundo. Todo o processo de carga, limpeza e padronização, criação do modelo e análise e vizualização dos dados está registrado de forma objetiva e completa ao longo de 7 notebooks no DataBricks.
+Os dados analisados foram coletados no banco de dados da *_World Values Survey_* (WVS), projeto de pesquisa global que estuda os valores e crenças socioculturais, políticos, econômicos e religiosos das pessoas em todo o mundo. Todo o processo de carga, limpeza e padronização, criação do modelo e análise e vizualização dos dados está registrado de forma objetiva e completa ao longo de 7 notebooks no DataBricks.
 
+Os ciclos de pesquisa do WVS são classificados em "Waves". A Wave mais recente, Wave 7, é datada de 2017 a 2022. Neste período, os jovens da geração z tinham de 15 a 25 anos de idade. Por conta disso, as análises foram feitas considerando os entrevistados desta **faixa etária** em cada Wave. 
 
 ## Estrutura do Projeto
 
@@ -94,6 +95,8 @@ Os dados analisados foram coletados no banco de dados da World Values Survey (WV
 - Os **valores numéricos remanescentes** foram substituídos por **valores textuais correspondentes**, conforme os arquivos de correspondência da WVS.
 - A tabela final foi disposta no **schema `silver`**.
 - Linguagens utilizadas: **SQL** e **Spark SQL**.
+
+### Carregamento dos dados 
 
 #### Notebook 5 – Criação do modelo
 - Criação da **tabela fato** e das **tabelas dimensão**.
