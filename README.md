@@ -142,16 +142,6 @@ Foi criado um modelo do tipo **_Snowflake_**, composto por uma tabela fato e qua
 - Análise dos **valores conservadores** nos países com maior crescimento recente do catolicismo, tanto em relação às outras religiões declaradas quanto ao montante “católicos + protestantes”.
 
 
-## Análise dos dados
-
-#### Notebook 6 – Análise dos dados (Parte 1)
-- Cálculo da **variação percentual de católicos romanos** ao longo das waves.
-- Cálculo da **variação percentual de católicos romanos** ao longo das waves, em comparação ao **montante de "católicos + protestantes"**.
-- Identificação dos **países com maior crescimento percentual de católicos romanos**, tanto em termos absolutos quanto **em relação aos protestantes**.
-
-#### Notebook 7 – Análise dos dados (Parte 2)
-- Análise dos **valores conservadores nos países com maior crescimento recente do catolicismo** em relação às outras religiões declaradas e em relação ao montante "católicos + protestantes".
-
 
 ## Tecnologias Utilizadas
 
