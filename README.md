@@ -69,17 +69,17 @@ Foi criado um modelo tipo **_Snow Flake_** com uma tabela dimensão e quatro tab
 
 ### Tabela fato
 
-* fact_wave_all: Reúne as informações de identificação dos entrevistados (país, sexo, faixa etária), as respostas das perguntas feitas e a ciclo de pesquisa em questão.
+* **fact_wave_all**: Reúne as informações de identificação dos entrevistados (país, sexo, faixa etária), as respostas das perguntas feitas e a ciclo de pesquisa em questão.
 
-### Tabelas dimensão.
+### Tabelas dimensão
 
-* dim_country: Reúne o nome dos países e seu código correspondente.
+* **dim_country**: Reúne o nome dos países e seu código correspondente.
 
-* dim_age: Reúne os valores distintos das idades dos entrevistados ao longo das waves e a faixa etária correspondente a cada idade. 
+* **dim_age**: Reúne os valores distintos das idades dos entrevistados ao longo das waves e a faixa etária correspondente a cada idade. 
 
-* dim_age_range: Reúne os valores distintos das faixas etárias. 
+* **dim_age_range**: Reúne os valores distintos das faixas etárias. 
 
-* dim_wave: Reúne os valores distintos que identificam cada Wave. 
+* **dim_wave**: Reúne os valores distintos que identificam cada Wave. 
 
 
 
