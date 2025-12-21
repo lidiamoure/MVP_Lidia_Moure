@@ -7,8 +7,10 @@
 
 
 ## Tabela: fact_wave_all
+- **Origem dos dados**: **World's Values Survey**
 - **Camada:** Gold  
 - **Descrição:** Tabela fato com dados da pesquisa World Values Survey, contendo informações demográficas e respostas relacionadas a religião, valores sociais e opiniões.
+- **Domínio**: O domínio dos valores dos dados pode ser consultado nos code notebooks de cada wave, no seguinte diretório: Arquivos utilizados para preparação de dados/Code_Notebook
 
 | Coluna | Tipo | Descrição |
 |------|------|-----------|
@@ -74,7 +76,7 @@
   
 | Coluna                     | Tipo   | Descrição |
 |---------------------------|--------|-----------|
-| Wave                      | int    | Número identificador do ciclo da pesquisa |
+| Wave                      | int    | Número identificador do ciclo da pesquisa: 3, 4, 5, 6 ou 7 |
 
 ## View: v_countries_growth_catholicism
 
@@ -99,7 +101,7 @@ Descrição: View análitica que retorna os 10 países que apresentaram maior cr
 | ------------ | ------ | -------------------------------------------------------------------------------------------------- |
 | country      | string | Nome do país.                                                                                      |
 | country_code | int    | Código do país.                                                                                    |
-| trend_slope  | double | Inclinação da tendência da proporção entre católicos e protestantes ao longo das waves analisadas. |
+| trend_slope  | double | Inclinação da regressão linear indicando crescimento (valor positivo) ou declínio (valor negativo)  da proporção entre católicos e protestantes ao longo das waves analisadas. |
 | n_waves      | int    | Quantidade de waves consideradas no cálculo da tendência.                                          |
 
 
