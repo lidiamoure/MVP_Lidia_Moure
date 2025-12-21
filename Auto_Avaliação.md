@@ -45,6 +45,6 @@ Tendo em vista estas circunstâncias, o processo de padronização dos dados foi
 
 * Fazer a análise da **aderência a valores conservadores por países**. Através da seleção dos 5 países em que houve maior crescimento percentual de católicos romanos dentre jovens da geração z. 
 
-* Comparar, também, a aderência a valores conservadores de grupos amostrais de **outras faixas etárias**. 
+* Comparar, também, a aderência a valores conservadores de grupos amostrais de **outras faixas etárias** e em relação ao **sexo** dos entrevistados.
 
 
