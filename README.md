@@ -2,7 +2,7 @@
 
 ## Introdução
 
-Muito tem se discutido a respeito do retorno dos jovens da geração z ao catolicismo, bem como de sua maior aderência a valores conservadores num geral. O objetivo deste estudo é verificar a vercidade destas hipóteses. Para este fim, foi desenvolvida uma pipeline de dados no Databricks, utilizando notebooks, tabelas Delta Lake para ingestão, tratamento, modelagem e visualização de dados.
+Muito tem se discutido sobre o crescimento percentual de jovens da geração z praticantes do catolicismo, bem como de sua maior aderência a valores conservadores num geral. O objetivo deste estudo é verificar a vercidade destas hipóteses. Para este fim, foi desenvolvida uma pipeline de dados no Databricks, utilizando notebooks, tabelas Delta Lake para ingestão, tratamento, modelagem e visualização de dados.
 
 Os dados analisados foram coletados no banco de dados da *_World Values Survey_* (WVS), projeto de pesquisa global que estuda os valores e crenças socioculturais, políticos, econômicos e religiosos das pessoas em todo o mundo. Todo o processo de carga, limpeza e padronização, criação do modelo e análise e vizualização dos dados está registrado de forma objetiva e completa ao longo de 7 notebooks no DataBricks.
 
@@ -55,7 +55,36 @@ Os ciclos de pesquisa do WVS são classificados em "Waves". A Wave mais recente,
 * Verificar a **variação percentual** de jovens católicos ao longo do tempo.
 * Verificar a **variação percentual** de jovens católicos em relação ao montante "católicos + Protestantes" ao longo do tempo.
 * **Ranquear os países** com maior variação percentual.
-* Correlacionar os resultados encontrados à aderência a valores conservadores. 
+* Correlacionar os resultados encontrados à aderência a valores conservadores.
+
+## Qualidade dos dados
+
+- A base de dados escolhida não apresentou problemas de qualidade _per se_. Os arquivos CSV tinham delimitadores claros, com atomicidade presente e não foram encontradas duplicidade ou inconsistências.
+- Contudo, tanto o nome das colunas quanto as instâncias delas são originalmente preenchidas com siglas (string) e números (INT). Para possibilitar a análise dos dados, foi feita a substituição destas siglas e números pelos dados correspondentes. Estes, são disponibilizados nos arquivos de correspondência e code notebooks no site da WVS. Estes arquivos também estão disponíveis na seguinte pasta deste repositório: "Arquivos utilizados para preparação de dados".
+- A limpeza e padronização dos dados foi feita ao longo de três notebooks no Databricks. Foram utilizadas as linguagens SQL e Python.
+  
+## Descrição do modelo criado
+
+Foi criado um modelo tipo **_Snow Flake_** com uma tabela dimensão e quatro tabelas fatos.
+
+### Tabela fato
+
+* fact_wave_all: Reúne as informações de identificação dos entrevistados (país, sexo, faixa etária), as respostas das perguntas feitas e a ciclo de pesquisa em questão.
+
+### Tabelas dimensão.
+
+* dim_country: Reúne o nome dos países e seu código correspondente.
+
+* dim_age: Reúne os valores distintos das idades dos entrevistados ao longo das waves e a faixa etária correspondente a cada idade. 
+
+* dim_age_range: Reúne os valores distintos das faixas etárias. 
+
+* dim_wave: Reúne os valores distintos que identificam cada Wave. 
+
+
+
+
+
 
 
 
@@ -111,8 +140,6 @@ Os ciclos de pesquisa do WVS são classificados em "Waves". A Wave mais recente,
 
 #### Notebook 7 – Análise dos dados (Parte 2)
 - Análise dos **valores conservadores nos países com maior crescimento recente do catolicismo** em relação às outras religiões declaradas e em relação ao montante "católicos + protestantes".
-
-
 
 
 ## Tecnologias Utilizadas
