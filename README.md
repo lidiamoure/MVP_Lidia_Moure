@@ -2,7 +2,7 @@
 
 ## Introdução
 
-Muito tem se discutido sobre o crescimento percentual de jovens da geração z praticantes do catolicismo, bem como de sua maior aderência a valores conservadores num geral. O objetivo deste estudo é verificar a vercidade destas hipóteses. Para este fim, foi desenvolvida uma pipeline de dados no Databricks, utilizando notebooks, tabelas Delta Lake para ingestão, tratamento, modelagem e visualização de dados.
+Muito tem se discutido sobre o crescimento percentual de jovens da geração z praticantes do catolicismo, bem como de sua maior aderência a valores conservadores num geral. O objetivo deste estudo é verificar a veracidade destas hipóteses. Para este fim, foi desenvolvida uma pipeline de dados no Databricks, utilizando notebooks, tabelas Delta Lake para ingestão, tratamento, modelagem e visualização de dados.
 
 Os dados analisados foram coletados no banco de dados da *_World Values Survey_* (WVS), projeto de pesquisa global que estuda os valores e crenças socioculturais, políticos, econômicos e religiosos das pessoas em todo o mundo. Todo o processo de carga, limpeza e padronização, criação do modelo e análise e vizualização dos dados está registrado de forma objetiva e completa ao longo de 7 notebooks no DataBricks.
 
